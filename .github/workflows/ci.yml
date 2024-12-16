@@ -11,6 +11,7 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -20,23 +21,23 @@ jobs:
         with:
           node-version: 18
 
-      # Install dependencies for Frontend and Backend
-      - name: Install Frontend Dependencies
+      # Install dependencies
+      - name: Install frontend dependencies
         working-directory: ./frontend
         run: npm install
-      - name: Install Backend Dependencies
+      - name: Install backend dependencies
         working-directory: ./backend
         run: npm install
 
       # Lint and Test Frontend
-      - name: Lint and Test Frontend
+      - name: Frontend Lint and Test
         working-directory: ./frontend
         run: |
           npm run lint
-          npm test -- --coverage
+          npm run test -- --coverage
 
       # Lint and Test Backend
-      - name: Lint and Test Backend
+      - name: Backend Lint and Test
         working-directory: ./backend
         run: |
           npm run lint
