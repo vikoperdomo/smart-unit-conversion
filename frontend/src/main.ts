@@ -6,5 +6,5 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes), provideHttpClient(), provideAnimationsAsync()],
-}).catch((err) => console.error(err));
+    providers: [provideRouter(routes), provideHttpClient(), provideAnimationsAsync()]
+}).catch(err => console.error(err));
