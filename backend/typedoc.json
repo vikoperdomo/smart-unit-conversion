@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src/**/*.ts"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "name": "Backend Service",
+  "theme": "default",
+  "exclude": ["**/*.spec.ts", "node_modules"],
+  "includeVersion": true,
+  "hideGenerator": false,
+  "readme": "README.md"
+}

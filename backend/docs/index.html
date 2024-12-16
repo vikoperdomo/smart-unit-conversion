@@ -1,0 +1,144 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="."><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Backend Service - v1.0.0</title><meta name="description" content="Documentation for Backend Service"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search"><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Backend Service - v1.0.0</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>Backend Service - v1.0.0</h1></div><div class="tsd-panel tsd-typography"><a id="backend-service---unit-conversion-api" class="tsd-anchor"></a><h1 class="tsd-anchor-link">Backend Service - Unit Conversion API<a href="#backend-service---unit-conversion-api" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><a id="overview" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Overview<a href="#overview" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This API provides tools for science teachers to grade unit conversion problems entered by students. The system supports conversions for:</p>
+<ol>
+<li><strong>Temperatures</strong>: Kelvin, Celsius, Fahrenheit, Rankine.</li>
+<li><strong>Volumes</strong>: liters, tablespoons, cubic-inches, cups, cubic-feet, gallons.</li>
+</ol>
+<hr>
+<a id="features" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Features<a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ul>
+<li>Validates student responses as <code>correct</code>, <code>incorrect</code>, or <code>invalid</code>.</li>
+<li>Handles temperature and volume conversions.</li>
+<li>API-first design with Swagger for seamless documentation and testing.</li>
+<li>Fully tested using <code>jest</code> with 80%+ code coverage.</li>
+<li>Production-ready with CI/CD and linting integration.</li>
+</ul>
+<hr>
+<a id="prerequisites" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Prerequisites<a href="#prerequisites" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>The following versions of Node.js and npm are required:</p>
+<table>
+<thead>
+<tr>
+<th>Node Version</th>
+<th>NPM Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20.18.x</td>
+<td>10.9.x</td>
+</tr>
+</tbody>
+</table>
+<p>Ensure you are using the correct Node.js version before proceeding.</p>
+<hr>
+<a id="setup" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Setup<a href="#setup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="1-clone-the-repository" class="tsd-anchor"></a><h3 class="tsd-anchor-link">1. Clone the Repository<a href="#1-clone-the-repository" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-2">clone</span><span class="hl-1"> &lt;</span><span class="hl-2">repository-ur</span><span class="hl-1">l&gt;</span><br/><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">backend</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="2-install-dependencies" class="tsd-anchor"></a><h3 class="tsd-anchor-link">2. Install Dependencies<a href="#2-install-dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="3-build-the-project" class="tsd-anchor"></a><h3 class="tsd-anchor-link">3. Build the Project<a href="#3-build-the-project" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">build</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="4-run-the-development-server" class="tsd-anchor"></a><h3 class="tsd-anchor-link">4. Run the Development Server<a href="#4-run-the-development-server" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">dev</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="5-run-the-production-server" class="tsd-anchor"></a><h3 class="tsd-anchor-link">5. Run the Production Server<a href="#5-run-the-production-server" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">start</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<a id="using-nvm-node-version-manager" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Using NVM (Node Version Manager)<a href="#using-nvm-node-version-manager" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="install-nodejs-v20x" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Install Node.js v20.x<a href="#install-nodejs-v20x" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Ensure you are using the correct Node.js version by using <strong>NVM</strong>:</p>
+<ol>
+<li>
+<p>Install NVM (if not already installed):</p>
+<pre><code class="bash"><span class="hl-0">curl</span><span class="hl-1"> </span><span class="hl-3">-o-</span><span class="hl-1"> </span><span class="hl-2">https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh</span><span class="hl-1"> | </span><span class="hl-0">bash</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Restart your terminal or run:</p>
+<pre><code class="bash"><span class="hl-0">source</span><span class="hl-1"> </span><span class="hl-2">~/.nvm/nvm.sh</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>Install Node.js version 20.x:</p>
+<pre><code class="bash"><span class="hl-0">nvm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-4">20</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>Use Node.js version 20.x in the project:</p>
+<pre><code class="bash"><span class="hl-0">nvm</span><span class="hl-1"> </span><span class="hl-2">use</span><span class="hl-1"> </span><span class="hl-4">20</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+<li>
+<p>To ensure consistency, set Node.js 20 as the default for this project:</p>
+<pre><code class="bash"><span class="hl-0">nvm</span><span class="hl-1"> </span><span class="hl-2">alias</span><span class="hl-1"> </span><span class="hl-2">default</span><span class="hl-1"> </span><span class="hl-4">20</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ol>
+<p>You can now proceed with the usual installation and setup steps.</p>
+<hr>
+<a id="api-documentation" class="tsd-anchor"></a><h2 class="tsd-anchor-link">API Documentation<a href="#api-documentation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="1-serve-swagger-documentation-locally" class="tsd-anchor"></a><h3 class="tsd-anchor-link">1. Serve Swagger Documentation Locally<a href="#1-serve-swagger-documentation-locally" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">swagger:serve</span>
+</code><button type="button">Copy</button></pre>
+
+<p>Access it at: <a href="http://localhost:3000/api-docs">http://localhost:3000/api-docs</a></p>
+<hr>
+<a id="2-example-api-usage" class="tsd-anchor"></a><h3 class="tsd-anchor-link">2. Example API Usage<a href="#2-example-api-usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><a id="endpoint-post-apiconvert" class="tsd-anchor"></a><h4 class="tsd-anchor-link">Endpoint: <code>POST /api/convert</code><a href="#endpoint-post-apiconvert" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h4><p><strong>Request Body</strong>:</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;input&quot;</span><span class="hl-1">: </span><span class="hl-4">84.2</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;inputUnit&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Fahrenheit&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;targetUnit&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;Rankine&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;studentResponse&quot;</span><span class="hl-1">: </span><span class="hl-4">543.94</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>Response</strong>:</p>
+<pre><code class="json"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;status&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;correct&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;authoritativeAnswer&quot;</span><span class="hl-1">: </span><span class="hl-4">543.87</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-5">&quot;explanation&quot;</span><span class="hl-1">: </span><span class="hl-2">&quot;The student response matches the authoritative answer.&quot;</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<a id="testing" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Testing<a href="#testing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>Run all unit tests with coverage:</p>
+<pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">test</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<a id="linting--formatting" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Linting &amp; Formatting<a href="#linting--formatting" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="run-eslint" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Run ESLint:<a href="#run-eslint" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">lint</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="auto-fix-lint-issues" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Auto-Fix Lint Issues:<a href="#auto-fix-lint-issues" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">lint:fix</span>
+</code><button type="button">Copy</button></pre>
+
+<a id="format-code-with-prettier" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Format Code with Prettier:<a href="#format-code-with-prettier" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="bash"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">format</span>
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<a id="cicd-pipeline-optional" class="tsd-anchor"></a><h2 class="tsd-anchor-link">CI/CD Pipeline (Optional)<a href="#cicd-pipeline-optional" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>A CI/CD pipeline is integrated with GitHub Actions to ensure:</p>
+<ol>
+<li>Automated tests run on every push.</li>
+<li>Linting and formatting checks are applied.</li>
+<li>Successful deployment on merging to the <code>main</code> branch.</li>
+</ol>
+<hr>
+<a id="directory-structure" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Directory Structure<a href="#directory-structure" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="plaintext">backend/
+├── dist/                  # Compiled TypeScript code
+├── src/                   # Source code
+│   ├── app.ts             # Main application file
+│   ├── routes             # Route definitions
+│   ├── middleware         # Middlewares for error and logging
+│   ├── services           # Business logic
+│   ├── utils              # Utility functions
+│   ├── constants          # Shared constants
+│   ├── types              # Shared type definitions
+├── swagger/               # Swagger configuration
+├── tests/                 # Unit tests
+├── package.json           # Dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+├── .eslintrc.json         # ESLint configuration
+├── .prettierrc            # Prettier configuration
+└── README.md              # Project documentation
+</code><button type="button">Copy</button></pre>
+
+<hr>
+<a id="contributing" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Contributing<a href="#contributing" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ol>
+<li>Fork the repository.</li>
+<li>Create a feature branch.</li>
+<li>Submit a pull request.</li>
+</ol>
+<hr>
+<a id="contact" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Contact<a href="#contact" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>For any questions, contact the repository owner at <code>viktorperdomo@example.com</code>.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#backend-service---unit-conversion-api"><span>Backend <wbr/>Service -<wbr/> <wbr/>Unit <wbr/>Conversion API</span></a><ul><li><a href="#overview"><span>Overview</span></a></li><li><a href="#features"><span>Features</span></a></li><li><a href="#prerequisites"><span>Prerequisites</span></a></li><li><a href="#setup"><span>Setup</span></a></li><li><ul><li><a href="#1-clone-the-repository"><span>1. <wbr/>Clone the <wbr/>Repository</span></a></li><li><a href="#2-install-dependencies"><span>2. <wbr/>Install <wbr/>Dependencies</span></a></li><li><a href="#3-build-the-project"><span>3. <wbr/>Build the <wbr/>Project</span></a></li><li><a href="#4-run-the-development-server"><span>4. <wbr/>Run the <wbr/>Development <wbr/>Server</span></a></li><li><a href="#5-run-the-production-server"><span>5. <wbr/>Run the <wbr/>Production <wbr/>Server</span></a></li></ul></li><li><a href="#using-nvm-node-version-manager"><span>Using NVM (<wbr/>Node <wbr/>Version <wbr/>Manager)</span></a></li><li><ul><li><a href="#install-nodejs-v20x"><span>Install <wbr/>Node.js v20.x</span></a></li></ul></li><li><a href="#api-documentation"><span>API <wbr/>Documentation</span></a></li><li><ul><li><a href="#1-serve-swagger-documentation-locally"><span>1. <wbr/>Serve <wbr/>Swagger <wbr/>Documentation <wbr/>Locally</span></a></li><li><a href="#2-example-api-usage"><span>2. <wbr/>Example API <wbr/>Usage</span></a></li><li><ul><li><a href="#endpoint-post-apiconvert"><span>Endpoint: POST /api/convert</span></a></li></ul></li></ul></li><li><a href="#testing"><span>Testing</span></a></li><li><a href="#linting--formatting"><span>Linting &amp; <wbr/>Formatting</span></a></li><li><ul><li><a href="#run-eslint"><span>Run ESLint:</span></a></li><li><a href="#auto-fix-lint-issues"><span>Auto-<wbr/>Fix <wbr/>Lint <wbr/>Issues:</span></a></li><li><a href="#format-code-with-prettier"><span>Format <wbr/>Code with <wbr/>Prettier:</span></a></li></ul></li><li><a href="#cicd-pipeline-optional"><span>CI/CD <wbr/>Pipeline (<wbr/>Optional)</span></a></li><li><a href="#directory-structure"><span>Directory <wbr/>Structure</span></a></li><li><a href="#contributing"><span>Contributing</span></a></li><li><a href="#contact"><span>Contact</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">Backend Service - v1.0.0</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

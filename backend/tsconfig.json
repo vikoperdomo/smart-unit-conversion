@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "./",
+    "baseUrl": "./"
+  },
+  "include": [
+    "src/**/*.ts",
+    "swagger/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

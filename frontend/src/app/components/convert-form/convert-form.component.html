@@ -1,0 +1,37 @@
+<div class="convert-form">
+    <h2>Unit Conversion Tool</h2>
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Input Value</mat-label>
+        <input matInput type="number" [(ngModel)]="formData.input" name="input" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>From Unit</mat-label>
+        <mat-select [(ngModel)]="formData.inputUnit" name="inputUnit">
+          <mat-option *ngFor="let unit of units.temperature.concat(units.volume)" [value]="unit">
+            {{ unit }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>To Unit</mat-label>
+        <mat-select [(ngModel)]="formData.targetUnit" name="targetUnit">
+          <mat-option *ngFor="let unit of units.temperature.concat(units.volume)" [value]="unit">
+            {{ unit }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Student Response</mat-label>
+        <input matInput type="number" [(ngModel)]="formData.studentResponse" name="studentResponse" required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
+        {{ isLoading ? 'Converting...' : 'Convert' }}
+      </button>
+    </form>
+  </div>
+  

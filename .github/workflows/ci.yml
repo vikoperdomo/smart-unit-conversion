@@ -1,0 +1,66 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Install dependencies for Frontend and Backend
+      - name: Install Frontend Dependencies
+        working-directory: ./frontend
+        run: npm install
+      - name: Install Backend Dependencies
+        working-directory: ./backend
+        run: npm install
+
+      # Lint and Test Frontend
+      - name: Lint and Test Frontend
+        working-directory: ./frontend
+        run: |
+          npm run lint
+          npm test -- --coverage
+
+      # Lint and Test Backend
+      - name: Lint and Test Backend
+        working-directory: ./backend
+        run: |
+          npm run lint
+          npm test -- --coverage
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    steps:
+      - uses: actions/checkout@v3
+
+      # Deploy Frontend to Vercel
+      - name: Deploy Frontend to Vercel
+        uses: AmruthPillai/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: '--prod'
+          working-directory: ./frontend
+
+      # Deploy Backend to Heroku
+      - name: Deploy Backend to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: backend-unit-conversion
+          heroku_email: vikoperdomo@gmail.com
+          working_directory: ./backend
